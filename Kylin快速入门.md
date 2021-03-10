@@ -5,7 +5,7 @@
 因为Kylin依赖 JDK、Hadoop、Hive、Hbase、Spark、Kafka和MySQL等大量服务，对于初学者来说有相当大的难度。因此Kylin面向初学用户提供了包含上诉所有服务的docker镜像。
 
 ```shell
-# 拉去镜像
+# 拉取镜像
 docker pull apachekylin/apache-kylin-standalone:3.1.0
 ```
 
@@ -71,4 +71,4 @@ select part_dt, sum(price) as total_sold, count(distinct seller_id) as sellers f
 
 ![image-20210310214235543](https://github.com/BeanCookie/note-images/blob/main/kylin007.png)
 
-同样的结果Hive中要执行将近30秒，整整快了200多倍。
+同样的SQL在Hive中要执行将近30秒，相比Kylin慢了200多倍。
